@@ -21,6 +21,7 @@
     />
 
     <link rel="stylesheet" href="assets/css/styles.css" />
+    <script src="/assets/js/app.js" defer></script>
   </head>
 
   <body>
@@ -141,7 +142,7 @@
 
       <figure>
         <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="#"><i class="fa-solid fa-envelope"></i></a>
+        <a onclick="popup()" href="#"><i class="fa-solid fa-envelope"></i></a>
         <a href="#"><i class="fa-brands fa-twitter"></i></a>
         <a href="#"><i class="fa-brands fa-instagram"></i></a>
       </figure>
@@ -162,20 +163,25 @@
         <form>
           <div class="popup-wrap">
             <input
+              required
               type="text"
               placeholder="Name"
               minlength="2"
               class="contact-in-input"
             />
             <input
+              required
               type="text"
               placeholder="Email"
+              minlength="5"
               maxlength="30"
               class="contact-in-input"
             />
           </div>
 
           <textarea
+            required
+            minlength="10"
             placeholder="Write your message here"
             class="contact-in-textarea"
           ></textarea>

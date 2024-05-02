@@ -54,50 +54,6 @@ nav ul {
   display: none;
 }
 
-@media screen and (max-width: 768px) {
-  .nav-links {
-    position: absolute;
-    height: calc(100% - 300px);
-    opacity: 0;
-    width: 100%;
-    height: 350px;
-    top: 80px;
-    left: -100%;
-    background-color: black;
-    padding-left: 2px;
-    text-align: center;
-    z-index: 99;
-    display: block;
-  }
-
-  nav ul li a {
-    display: block;
-    margin-bottom: 20px;
-    font-size: 2rem;
-    text-align: center;
-  }
-
-  #toggle-nav-btn-open {
-    display: inline-block;
-  }
-
-  #toggle-nav:checked ~ label #toggle-nav-btn-open {
-    display: none;
-  }
-
-  #toggle-nav:checked ~ label #toggle-nav-btn-close {
-    display: inline-block;
-  }
-
-  .underline-hover:hover::after {
-    display: none;
-  }
-
-  nav li:nth-child(1) {
-    margin-right: 60px;
-  }
-}
-
 #toggle-nav:checked ~ .nav-links {
   opacity: 1;
   left: 0;
@@ -213,7 +169,7 @@ header {
 }
 
 .btn-viewmore:hover {
-  background-color: white;
+  background-color: #f2e5b9;
 }
 
 header h1 {
@@ -225,7 +181,6 @@ header p {
 }
 
 /*This week*/
-
 .this-week {
   width: 100%;
   margin: 0 auto;
@@ -263,6 +218,10 @@ header p {
   text-decoration: none;
 }
 
+.this-week a:hover {
+  text-decoration: underline;
+}
+
 .this-week h4 {
   font-size: 2.4rem;
   color: white;
@@ -273,67 +232,6 @@ header p {
   margin-bottom: 33px;
   width: 100%;
   height: 100%;
-}
-
-@media screen and (max-width: 768px) {
-  .this-week div {
-    flex-direction: column;
-  }
-  .this-week h2 {
-    font-size: 3.8rem;
-  }
-
-  .this-week p {
-    font-size: 1.3rem;
-  }
-
-  .this-week h4 {
-    font-size: 2rem;
-  }
-
-  .trending-products div {
-    flex-direction: column;
-  }
-  .trending-products h2 {
-    font-size: 3.8rem;
-  }
-
-  .trending-products p {
-    font-size: 1.3rem;
-  }
-
-  .trending-products h4 {
-    font-size: 2rem;
-  }
-}
-
-@media screen and (max-width: 700px) {
-  .this-week div {
-    flex-direction: column;
-  }
-  .this-week h2 {
-    font-size: 3.5rem;
-  }
-
-  .this-week p {
-    font-size: 1.1rem;
-  }
-
-  .this-week h4 {
-    font-size: 1.8rem;
-  }
-
-  .trending-products h2 {
-    font-size: 3.5rem;
-  }
-
-  .trending-products p {
-    font-size: 1.1rem;
-  }
-
-  .trending-products h4 {
-    font-size: 1.8rem;
-  }
 }
 
 /*Trending products*/
@@ -366,7 +264,7 @@ header p {
 }
 
 .trending-products .btn-viewmore:hover {
-  color: #fff3c7;
+  background-color: #356d52;
 }
 
 .trending-products h2 {
@@ -405,6 +303,7 @@ header p {
 /*inspiring products*/
 .inspiring-products {
   position: relative;
+  width: 100%;
 }
 
 .inspiring-products img {
@@ -425,45 +324,17 @@ header p {
 }
 
 .inspiring-products .btn-viewmore:hover {
-  background-color: white;
+  background-color: #f2e5b9;
 }
 
 .inspiring-products p {
   margin-bottom: 24px;
 }
 
-@media screen and (max-width: 942px) {
-  .inspiring-products h2 {
-    font-size: 3.5rem;
-  }
-
-  .inspiring-products p {
-    font-size: 1.4rem;
-  }
-
-  .inspiring-products .btn-viewmore {
-    font-size: 1.2rem;
-    padding: 8px 45px;
-  }
-}
-
-@media screen and (max-width: 700px) {
-  .inspiring-products h2 {
-    font-size: 3rem;
-  }
-
-  .inspiring-products p {
-    font-size: 1.2rem;
-  }
-
-  .inspiring-products .btn-viewmore {
-    font-size: 1.1rem;
-    padding: 6px 40px;
-  }
-}
-
 /*Subcribe*/
 .subscribe {
+  position: relative;
+  bottom: 5px;
   height: 208px;
   background-color: #3d7a5d;
   display: flex;
@@ -485,44 +356,7 @@ header p {
 }
 
 .subscribe .btn-viewmore:hover {
-  background-color: white;
-}
-
-@media screen and (max-width: 768px) {
-  .subscribe {
-    flex-direction: column;
-  }
-
-  .subscribe h3 {
-    font-size: 2.8rem;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    top: 60%;
-  }
-
-  .subscribe .btn-viewmore {
-    font-size: 1.4rem;
-    padding: 10px 25px;
-    position: relative;
-    bottom: 60%;
-  }
-
-  .trending-products .btn-viewmore {
-    font-size: 1.3rem;
-    padding: 10px 40px;
-  }
-}
-
-@media screen and (max-width: 700px) {
-  .subscribe h3 {
-    font-size: 2.4rem;
-  }
-
-  .subscribe .btn-viewmore {
-    font-size: 1.2rem;
-    padding: 8px 20px;
-  }
+  background-color: #f2e5b9;
 }
 
 /*Footer*/
@@ -579,22 +413,22 @@ footer i:hover {
   color: #fff3c7;
 }
 
-@media screen and (max-width: 768px) {
-  footer h6 {
-    font-size: 2.1rem;
-  }
-
-  footer p {
-    font-size: 1.4rem;
-  }
-}
-
 /*Pop up*/
 .popup {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 896px;
   height: auto;
   margin: 0 auto;
   background-color: #1f1e1c;
+  display: none;
+  margin: 82px auto 86px auto;
+  z-index: 999;
+  width: 80%;
+}
+
+.popup.popup-active {
   display: flex;
 }
 
@@ -682,4 +516,237 @@ input:nth-child(2) {
   font-size: 1.6rem;
   cursor: pointer;
   border-radius: 25px;
+}
+
+.contact-in-btn:hover {
+  background-color: #eddfb0;
+}
+
+/*Responsive*/
+@media screen and (max-width: 1000px) {
+  .subscribe h3 {
+    padding-left: 30px;
+    font-size: 3rem;
+  }
+
+  .subscribe .btn-viewmore {
+    margin-right: 30px;
+  }
+}
+
+@media screen and (max-width: 942px) {
+  .inspiring-products h2 {
+    font-size: 3.5rem;
+  }
+
+  .inspiring-products p {
+    font-size: 1.4rem;
+  }
+
+  .inspiring-products .btn-viewmore {
+    font-size: 1.2rem;
+    padding: 8px 45px;
+  }
+}
+
+/*Tablet (768px)*/
+@media screen and (max-width: 768px) {
+  /*Navigation*/
+  .nav-links {
+    position: absolute;
+    height: calc(100% - 300px);
+    opacity: 0;
+    width: 100%;
+    height: 350px;
+    top: 80px;
+    left: -100%;
+    background-color: black;
+    padding-left: 2px;
+    text-align: center;
+    z-index: 99;
+    display: block;
+  }
+
+  nav ul li a {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  #toggle-nav-btn-open {
+    display: inline-block;
+  }
+
+  #toggle-nav:checked ~ label #toggle-nav-btn-open {
+    display: none;
+  }
+
+  #toggle-nav:checked ~ label #toggle-nav-btn-close {
+    display: inline-block;
+  }
+
+  .underline-hover:hover::after {
+    display: none;
+  }
+
+  nav li:nth-child(1) {
+    margin-right: 60px;
+  }
+
+  /*font-size*/
+  h1 {
+    font-size: 5rem;
+  }
+
+  h2 {
+    font-size: 3.6rem;
+  }
+
+  h4 {
+    font-size: 1.6rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
+
+  /*this week*/
+  .this-week div {
+    flex-direction: column;
+  }
+
+  /*Trending-products*/
+  .trending-products div {
+    flex-direction: column;
+  }
+
+  .trending-products h4 {
+    font-size: 1.9rem;
+  }
+
+  .trending-products .btn-viewmore {
+    font-size: 1.3rem;
+    padding: 10px 40px;
+  }
+
+  /*Subscribe*/
+  .subscribe {
+    flex-direction: column;
+  }
+
+  .subscribe h3 {
+    font-size: 2.8rem;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 60%;
+  }
+
+  .subscribe .btn-viewmore {
+    font-size: 1.4rem;
+    padding: 10px 25px;
+    position: relative;
+    bottom: 60%;
+  }
+
+  /*Footer*/
+  footer h6 {
+    font-size: 2.1rem;
+  }
+
+  footer p {
+    font-size: 1.4rem;
+  }
+
+  footer i {
+    font-size: 2rem;
+    width: 35px;
+    height: 35px;
+  }
+}
+
+/*Mobile (700px)*/
+@media screen and (max-width: 700px) {
+  /*font-size*/
+  h1 {
+    font-size: 4.2rem;
+  }
+
+  h2 {
+    font-size: 3.2rem;
+  }
+
+  h4 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1.4rem;
+  }
+
+  /*This week*/
+  .this-week div {
+    flex-direction: column;
+  }
+
+  /*Inspiring products*/
+  .inspiring-products .btn-viewmore {
+    font-size: 1.1rem;
+    padding: 6px 40px;
+  }
+
+  /*Subscribe*/
+  .subscribe h3 {
+    font-size: 2.4rem;
+  }
+
+  .subscribe .btn-viewmore {
+    font-size: 1.2rem;
+    padding: 8px 20px;
+  }
+}
+
+/*Responsive popup*/
+@media screen and (max-width: 910px) {
+  .popup {
+    width: 600px;
+  }
+
+  .popup h3 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    margin-top: 35px;
+  }
+
+  .popup p {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+  }
+
+  .popup p:last-child {
+    margin-bottom: 20px;
+  }
+
+  .contact-in-textarea {
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+  }
+
+  input:nth-child(1),
+  input:nth-child(2) {
+    width: 37%;
+    height: 30px;
+  }
+
+  input {
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+  }
+
+  .contact-in-btn {
+    width: 80%;
+    height: 30px;
+    font-size: 1.3rem;
+  }
 }
